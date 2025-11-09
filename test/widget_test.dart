@@ -10,6 +10,33 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:pantalla_consentimiento/main.dart';
 
+class CounterApp extends StatefulWidget {
+  const CounterApp({Key? key}) : super(key: key);
+
+    await tester.pumpWidget(const CounterApp());
+  State<CounterApp> createState() => _CounterAppState();
+}
+
+class _CounterAppState extends State<CounterApp> {
+  int _counter = 0;
+
+  void _increment() => setState(() { _counter++; });
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Counter')),
+        body: Center(child: Text('$_counter', style: const TextStyle(fontSize: 24))),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _increment,
+          child: const Icon(Icons.add),
+        ),
+      ),
+    );
+  }
+}
+
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.

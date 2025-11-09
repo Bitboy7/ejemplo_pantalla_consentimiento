@@ -1,6 +1,6 @@
-# Pantalla de Consentimiento - Flutter
+# Ejemplo de pantalla de consentimiento - Flutter
 
-Una aplicación Flutter que demuestra el manejo de permisos con una pantalla de consentimiento previa.
+Una pequeña app que demuestra el manejo de permisos con una pantalla previa.
 
 ## Características
 
@@ -8,7 +8,6 @@ Una aplicación Flutter que demuestra el manejo de permisos con una pantalla de 
 - ✅ Solicitud automática de permisos al aceptar
 - ✅ Visualización del estado de cada permiso
 - ✅ Manejo de permisos permanentemente denegados
-- ✅ Apertura automática de ajustes del sistema
 - ✅ Compatibilidad con Android moderno (API 30+)
 
 ## Permisos Incluidos
@@ -73,7 +72,6 @@ pubspec.yaml               # Dependencias del proyecto
 
 ### Permisos Permanentemente Denegados
 
-- Detección automática cuando un permiso está permanentemente denegado
 - Apertura directa de la pantalla de ajustes del sistema
 
 ### Permisos Modernos de Android
