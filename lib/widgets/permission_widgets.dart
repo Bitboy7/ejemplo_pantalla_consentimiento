@@ -14,15 +14,8 @@ class PermissionWidgets {
           color: Colors.green.shade600,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: const Center(
-          child: Text(
-            '✓',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+        child: Center(
+          child: FaIcon(FontAwesomeIcons.check, color: Colors.white, size: 16),
         ),
       );
     } else if (status.isPermanentlyDenied) {
@@ -33,8 +26,8 @@ class PermissionWidgets {
           color: Colors.orange.shade600,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: const Center(
-          child: Text('⚙', style: TextStyle(color: Colors.white, fontSize: 18)),
+        child: Center(
+          child: FaIcon(FontAwesomeIcons.gear, color: Colors.white, size: 16),
         ),
       );
     } else {
@@ -45,15 +38,8 @@ class PermissionWidgets {
           color: Colors.red.shade600,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: const Center(
-          child: Text(
-            '✗',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+        child: Center(
+          child: FaIcon(FontAwesomeIcons.xmark, color: Colors.white, size: 18),
         ),
       );
     }
