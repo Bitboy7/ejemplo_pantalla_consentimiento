@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/consent_screen.dart';
+import 'screens/terms_screen.dart';
 
 void main() {
   runApp(const ConsentApp());
@@ -14,7 +14,7 @@ class ConsentApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pantalla de Consentimiento',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const ConsentScreen(),
+      home: const TermsScreen(),
     );
   }
 }

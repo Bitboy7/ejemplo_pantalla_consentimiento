@@ -5,6 +5,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 class DataManager {
   static const String _consentKey = 'user_consent_given';
   static const String _permissionsKey = 'permissions_status';
+  static const String _termsAcceptedKey = 'terms_accepted';
+  static const String _newsletterKey = 'accept_newsletter';
+  static const String _offersKey = 'accept_offers';
 
   /// Guarda si el usuario ha dado su consentimiento
   static Future<void> saveConsentStatus(bool consentGiven) async {
@@ -16,6 +19,40 @@ class DataManager {
   static Future<bool> getConsentStatus() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getBool(_consentKey) ?? false;
+  }
+
+  /// Guarda si el usuario aceptó los términos y condiciones
+  static Future<void> saveTermsAccepted(bool accepted) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_termsAcceptedKey, accepted);
+  }
+
+  /// Obtiene si el usuario aceptó los términos y condiciones
+  static Future<bool> getTermsAccepted() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_termsAcceptedKey) ?? false;
+  }
+
+  /// Guarda las preferencias de contacto
+  static Future<void> saveContactPreferences({
+    required bool newsletter,
+    required bool offers,
+  }) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_newsletterKey, newsletter);
+    await prefs.setBool(_offersKey, offers);
+  }
+
+  /// Obtiene si el usuario aceptó recibir newsletter
+  static Future<bool> getNewsletterPreference() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_newsletterKey) ?? false;
+  }
+
+  /// Obtiene si el usuario aceptó recibir ofertas
+  static Future<bool> getOffersPreference() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_offersKey) ?? false;
   }
 
   /// Guarda los estados de permisos

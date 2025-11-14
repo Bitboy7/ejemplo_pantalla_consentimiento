@@ -56,7 +56,7 @@ class _ConsentScreenState extends State<ConsentScreen> {
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
         title: const Text(
-          'Consentimiento',
+          'Permisos de la aplicación',
           style: TextStyle(fontWeight: FontWeight.w600),
         ),
         elevation: 0,
@@ -119,7 +119,7 @@ class _ConsentScreenState extends State<ConsentScreen> {
                   ],
                 ),
                 child: const Text(
-                  'Para continuar, necesitamos tu consentimiento para solicitar permisos de acceso a la cámara, ubicación y fotos. Estos permisos nos permitirán brindarte la mejor experiencia.',
+                  'Para continuar, necesitamos tu consentimiento para solicitar permisos de acceso a la cámara, ubicación y fotos. Esto nos permitirán brindarte la mejor experiencia.',
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.black87,
@@ -146,7 +146,7 @@ class _ConsentScreenState extends State<ConsentScreen> {
                     ),
                   ),
                   child: const Text(
-                    'Acepto',
+                    'Permitir',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
